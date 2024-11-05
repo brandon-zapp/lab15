@@ -1,1 +1,18 @@
-asdjfashk
+from machine import Pin
+from utime import sleep
+pin = Pin(18, Pin.OUT)
+pin2 = Pin(19, Pin.OUT)
+pin3 = Pin(20, Pin.OUT)
+
+
+while True:
+    try:
+       pin.toggle()
+       pin2.toggle()
+       pin3.toggle()
+       sleep(1)
+    except KeyboardInterrupt:
+        break
+pin.off()
+pin2.off()
+pin3.off()
